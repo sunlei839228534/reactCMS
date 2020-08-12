@@ -1,4 +1,4 @@
- const NAME_SPACE = {
+const NAME_SPACE = {
   COMMON: 'blog'
 }
 
