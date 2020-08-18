@@ -1,5 +1,6 @@
 const NAME_SPACE = {
-  COMMON: 'blog'
+  COMMON: 'blog',
+  USER: 'blog-User'
 }
 
 export default NAME_SPACE

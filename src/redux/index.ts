@@ -1,14 +1,14 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga'
 import Reducer from './reducers'
-import Saga from './sagas'
+import rootSaga from './sagas'
 
 const sagaMiddleware = createSagaMiddleware()
 
-const composeEnhancer = (window as any).__Redux_DEVTOOLS_EXTENSION_COMPOSE_ ? (window as any).__Redux_DEVTOOLS_EXTENSION_COMPOSE_() : compose
+const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(Reducer, composeEnhancer(applyMiddleware(sagaMiddleware)))
+const store = createStore(Reducer, composeEnhancers(applyMiddleware(sagaMiddleware)))
 
-sagaMiddleware.run(Saga)
+sagaMiddleware.run(rootSaga)
 
 export default store

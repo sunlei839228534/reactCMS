@@ -1,6 +1,6 @@
 interface ActionParams<T = any> { 
   type: string,
-  payload: Object<T>
+  payload?: Object<T>
 }
 
 interface IState { 
