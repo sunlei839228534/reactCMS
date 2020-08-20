@@ -27,7 +27,7 @@ function useActions(actions: {
       }
     })
     return newActions
-  },deps? [dispatch,...deps]:[dispatch])
+  },  deps ? [dispatch,...deps]:[dispatch])
 }
 
 export default useActions

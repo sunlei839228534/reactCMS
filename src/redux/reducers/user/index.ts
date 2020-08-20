@@ -7,7 +7,6 @@ const initialState = {
 export default (state = initialState,action:ActionParams) => {
   switch(action.type) {
     case loginAction.SUCCESS:
-      console.log('登录成功!',action.payload,action.payload);
       return {
         ...state,
         isLogin: true
